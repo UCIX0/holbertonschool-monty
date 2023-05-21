@@ -1,5 +1,5 @@
 #include "monty.h"
-////////////////////////////////////////////////////////////////////ERROR1
+/*----------------------------------------ERROR1*/
 /**
  * error_uso - Imprime mensajes de error de uso.
  *
@@ -60,7 +60,7 @@ int error_sin_entero(unsigned int line_number)
 	return (EXIT_FAILURE);
 }
 
-////////////////////////////////////////////////////////////////////ERROR2
+/*----------------------------------------ERROR2*/
 
 /**
  * error_pop - Imprime mensajes de error pop para pilas vacías.
@@ -126,7 +126,7 @@ int error_pchar(unsigned int line_number, char *mensaje)
 	return (EXIT_FAILURE);
 }
 
-////////////////////////////////////////////////////////////////////intacadena
+/*----------------------------------------intacadena*/
 
 /**
  * obtener_entero - obtiene un puntero a una nueva cadena que contiene un entero
@@ -215,7 +215,7 @@ void llenar_buff_base_num(unsigned int num, unsigned int base,
 		i--;
 	}
 }
-////////////////////////////////////////////////////////////////////hacerToken
+/*----------------------------------------hacerToken*/
 
 /**
  * cadAVector - toma una cadena y separa sus palabras
@@ -376,7 +376,7 @@ char *obtener_siguiente_palabra(char *str, char *delims)
 	return (str + i);
 }
 
-//////////////////////////////////////////////////////////////////////montyf1
+/*----------------------------------------montyf1*/
 
 /**
  * monty_inserta - Inserta un valor a una lista vinculada stack_t.
@@ -514,7 +514,7 @@ void monty_intercambia(stack_t **stack, unsigned int linea_numero)
 	(*stack)->next = temporal;
 }
 
-//////////////////////////////////////////////////////////////////////montyf2
+/*----------------------------------------montyf2*/
 
 /**
  * monty_suma - Suma los dos valores superiores de una lista vinculada stack_t.
@@ -632,7 +632,7 @@ void monty_modulo(stack_t **stack, unsigned int linea_numero)
 	monty_elimina(stack, linea_numero);
 }
 
-//////////////////////////////////////////////////////////////////////montyf3
+/*-----------------------------------------montyf3*/
 
 /**
  * monty_nop - No hace absolutamente nada para el opcode Monty 'nop'.
@@ -687,7 +687,7 @@ void monty_pstr(stack_t **stack, unsigned int linea_numero)
 
 	(void)linea_numero;
 }
-//////////////////////////////////////////////////////////////////////montyf4
+/*----------------------------------------montyf4*/
 
 /**
  * monty_rotl - Rota el valor superior de una lista vinculada stack_t hacia abajo.
@@ -764,7 +764,7 @@ void monty_queue(stack_t **stack, unsigned int linea_numero)
 }
 
 
-//////////////////////////////////////////////////////////////////////ejecutarmonty
+/*----------------------------------------ejecutarmonty*/
 
 /**
  * liberar_tokens - Libera la matriz global op_toks de cadenas.
@@ -926,8 +926,7 @@ int ejecutar_monty(FILE *script_fd)
 	free(linea);
 	return (estado_salida);
 }
-
-//////////////////////////////////////////////////////////////////////establecerop
+/*----------------------------------------establecerop*/
 
 /**
  * establecer_error_op_tok - Establece el último elemento de op_toks como un código de error.
@@ -964,7 +963,7 @@ void establecer_error_op_tok(int codigo_error)
 	op_toks = nuevos_toks;
 }
 
-//////////////////////////////////////////////////////////////////////pilas
+/*----------------------------------------pilas*/
 
 /**
  * liberar_pila - Libera una pila stack_t.
